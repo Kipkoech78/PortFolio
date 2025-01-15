@@ -40,6 +40,10 @@ function About() {
             <h1>80+</h1>
             <p>PROJECTS COMPLETED</p>
         </div>
+        <div className='about-achievement' >
+            <h1>80+</h1>
+            <p>PROJECTS COMPLETED</p>
+        </div>
      
     </div>
 
