@@ -13,6 +13,7 @@ function Footer() {
     <img src={footerImg} />
     <h1 className='footer-desc' >Living, learning, & leveling up one day at a time.</h1>
     <p>&copy; Kipkoech Linus. All rights reserved </p>
+    </div>
     <div className='footer-icons' >
     <FacebookIcon />
     <InstagramIcon />
@@ -20,7 +21,7 @@ function Footer() {
     <XIcon />
     <LinkedInIcon />
     
-    </div>
+   
 
     </div>
     </div>

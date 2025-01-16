@@ -2,7 +2,7 @@
 .mywork{
     display: flex;
     flex-direction: column;
-    margin: 10px 170px;
+    margin: 100px 170px;
     
 }
 .work-container{
@@ -32,4 +32,31 @@
 .workImg:hover{
     border: 2px solid white;
     
+}
+@media(max-width:768px){
+    .mywork{
+        margin: 100px 100px;
+    }
+    .work-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    
+    }
+    .workImg{
+        width: 300px;
+    }
+}
+@media(max-width:658px){
+    .work-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    
+    }
+    .workImg{
+        width: 100%;
+    }
+
 }

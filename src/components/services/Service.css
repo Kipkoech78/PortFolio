@@ -42,5 +42,33 @@
     line-height: 20px;
     font-size: 16px;
     max-width: 300px;
-
+}
+@media(max-width:768px){
+    .service{
+        margin: 20px 60px;
+        display: flex;
+    }
+    .service-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    .service-item{
+        flex-direction: column;
+        border: 2px solid white;
+        max-width: 300px;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+    }
+}
+@media(max-width:658px){
+    .service-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+       
+    }
 }

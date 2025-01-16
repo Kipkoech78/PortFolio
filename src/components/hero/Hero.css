@@ -60,3 +60,49 @@
     text-decoration: none;
     color: white;
 }
+
+@media(max-width:768px) {
+    
+    .hero h1{
+        text-align: center;
+        width: 400px;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .hero p{
+        font-size: 16px;
+    }
+    .hero-con{
+        padding: 15px 45px;
+        border-radius: 30px;
+        
+    }
+    .hero-resume{
+        padding: 15px 60px;
+        border-radius: 30px;
+        border: 1px solid white;
+       
+        
+    }
+}
+@media(max-width:658px) {
+    .hero{
+        gap: 20px;
+    }
+    .hero img{
+        margin-top: 30px;
+        width: 18%;
+        border-radius: 50%;
+    }
+    
+    .hero-action{
+        flex-direction: column;
+        
+    }
+    .hero h1{
+        text-align: center;
+        width: 250px;
+        font-size: 25px;
+        font-weight: 500;
+    }
+}

@@ -83,3 +83,67 @@
     gap: 0;
     justify-content:space-between;
 }
+@media(max-width:768px){
+    .contact{
+        width: 100%;
+        margin: 100px 50px;
+        justify-content: center;
+    }
+    .contact-left h1{
+        font-size: 30px;
+        font-weight: 500;
+        
+    }
+    .contact-left p{
+        font-size: 14px;
+        font-weight: 500;
+        max-width: 360px;
+        
+    }
+    .contact-section{
+        display: flex;
+        gap:70px;
+        flex-direction: column;
+    }
+    .contact-right textarea{
+        width: 400px;
+        font-size: 20px;
+    }
+    .contact-right input{
+        width: 400px;
+        font-size: 20px;
+        font-family: Outfit;
+    }
+}
+
+
+@media(max-width:658px){
+    .contact{
+        margin: 10px 20px;
+        width: 100%;
+        justify-content: center;
+    }
+   
+    .contact-right textarea{
+        width: 400px;
+        font-size: 20px;
+        padding: 15px;
+        
+    }
+}
+@media(max-width:418px){
+    .contact{
+        margin: 10px 20px;
+        width: 100%;
+        justify-content: center;
+    }
+   .contact input{
+    width: 320px;
+   }
+    .contact-right textarea{
+        width: 300px;
+        font-size: 20px;
+        padding: 15px;
+        
+    }
+}
