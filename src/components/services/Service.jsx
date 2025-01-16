@@ -3,7 +3,7 @@ import './Service.css'
 import services from '../../assets/services.json'
 function Service() {
   return (
-    <div className='service' >
+    <div id='services' className='service' >
         <div className='service-title' ><h1>My service </h1> </div>
         <div className='service-container'>
             {

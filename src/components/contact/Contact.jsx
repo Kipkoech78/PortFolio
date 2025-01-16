@@ -1,9 +1,35 @@
 import React from 'react'
 import './Contact.css'
 function Contact() {
+  const access_key = import.meta.env.VITE_WEB_ACCESS_KEY;
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", access_key);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+  
   return (
-    <div className='contact'>
-    <h1 className='contact-title' >Contact Me</h1>
+    <div id='contact' className='contact'>
+    <h1 className='contact-title' >Get in touch</h1>
     <div className='contact-section' >
     <div className='contact-left' > 
     <h1>
@@ -16,15 +42,17 @@ function Contact() {
         <p>Nakuru, Kenya</p>
     </div>
     </div>
-        <form className='contact-right'>
+        <form onSubmit={onSubmit} className='contact-right'>
             <label htmlFor='' >Your Name</label>
-            <input type='text' placeholder='John Doe' name='name' />
+            <input type='text' placeholder='John Doe' name='name' required />
             <label htmlFor='' >Your Email</label>
-            <input type='email' placeholder='example@gmail.com' name='email' />
+            <input type='email' placeholder='example@gmail.com' name='email' required />
             <label htmlFor='' >Write your message</label>
-            <textarea name='message' rows='6' placeholder='Enter your message' > </textarea>
-            <button className='submit-btn' type='submit'  >Submit now</button>
+            <textarea name='message' rows='6' placeholder='Enter your message' required  > </textarea>
+           <div className='submission' ><button className='submit-btn' type='submit'  >Submit now</button>  <span>{result}</span> </div> 
+            
         </form>
+        
     </div>
     </div>
   )

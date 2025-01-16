@@ -77,3 +77,9 @@
 .submit-btn:hover{
     transform: scale(1.08);
 }
+.submission{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content:space-between;
+}

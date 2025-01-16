@@ -56,3 +56,7 @@
 .hero-con:hover{
     border: 2px solid white;
 }
+.anchorlink{
+    text-decoration: none;
+    color: white;
+}

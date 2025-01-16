@@ -3,7 +3,7 @@ import './MyWork.css'
 import myProjects from '../../assets/myworkdata'
 function MyWork() {
   return (
-    <div className='mywork'>
+    <div id='projects' className='mywork'>
     <div className='work-title' > <h1>Completed Projects</h1> </div>
     <div className='work-container' >
         {
