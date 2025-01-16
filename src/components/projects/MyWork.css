@@ -1,0 +1,35 @@
+
+.mywork{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 170px;
+    
+}
+.work-container{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    gap: 20px;
+
+}
+.work-title{
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+.work-title h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.workImg{
+    width: 350px;
+    
+    border-radius: 10px;
+    transition: 0.4s;
+   
+}
+.workImg:hover{
+    border: 2px solid white;
+    
+}
