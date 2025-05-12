@@ -29,7 +29,7 @@ function Navbar() {
         <li> <AnchorLink className='anchorLink'  href='#home'>  <p onClick={(()=> setMenu("home"))}> Home </p></AnchorLink>  {menu ==="home" ? <img  className='lineImg'  src={line} /> : <></> } </li>
         <li  ><AnchorLink className='anchorLink' offset={50} href='#about' ><p  onClick={(()=> setMenu("about"))}>About me</p> </AnchorLink> {menu ==="about" ? <img className='lineImg'  src={line} /> : <></> } </li>
         <li><AnchorLink className='anchorLink' offset={50} href='#services'> <p onClick={(()=> setMenu("services"))}>services</p></AnchorLink>  {menu ==="services" ? <img className='lineImg' src={line} /> : <></> } </li>
-        <li><AnchorLink className='anchorLink' offset={50} href='#projects'> <p onClick={(()=> setMenu("tools"))}>Projects</p> </AnchorLink> {menu ==="tools" ? <img src={line} /> : <></> } </li>
+        <li><AnchorLink className='anchorLink' offset={50} href='#projects'> <p onClick={(()=> setMenu("tools"))}>Projects</p> </AnchorLink> {menu ==="tools" ? <img className='lineImg' src={line} /> : <></> } </li>
         <li><AnchorLink className='anchorLink' offset={50} href='#contact'> <p onClick={(()=> setMenu("contact"))}>contact</p> </AnchorLink> {menu ==="contact" ? <img className='lineImg'  src={line} /> : <></> } </li>
 
     </ul>
