@@ -33,7 +33,8 @@ function Navbar() {
         <li><AnchorLink className='anchorLink' offset={50} href='#contact'> <p onClick={(()=> setMenu("contact"))}>contact</p> </AnchorLink> {menu ==="contact" ? <img className='lineImg'  src={line} /> : <></> } </li>
 
     </ul>
-    <div className='nav-connect' > <AnchorLink className='anchorLink' href='https://github.com/Kipkoech78' offset={50} >Github.com </AnchorLink> </div>
+    <div onClick={()=> window.location.href = "https://github.com/Kipkoech78"}
+     className='nav-connect' > <p className='anchorLink' offset={50} >Github.com </p> </div>
     <div  onClick={openMenu}  className='menu-logo' > <MenuOpenIcon fontSize='large' /></div>
     </div>
    

@@ -19,10 +19,9 @@ function Hero() {
       </p>
       <div className="hero-action">
         <div className="hero-con">
-          {" "}
           <AnchorLink className="anchorlink" href="#contact" offset={50}>
             Connect with me
-          </AnchorLink>{" "}
+          </AnchorLink>
         </div>
         <div> <a
             href={resume}
