@@ -11,14 +11,16 @@ function About() {
         </div>
         <div className='about-right' >
         <div className='about-paragraph' >
-            <p>Deep Code Understanding
-            IntelliJ IDEA knows everything about your code and uses this knowledge to 
-            offer blazing fast navigation and an intelligent experience by providing relevant 
-            suggestions in every context.</p>
             <p>
-            Empowering enterprise development workflows
-            We meet the needs of enterprises at every stage, from design 
-            and development, to testing, and all the way through to deployment.
+
+I am a passionate and detail-oriented system developer with a strong foundation in both frontend and backend development. On the frontend, I work confidently with React.js, TypeScript, and Material UI to build responsive and intuitive user interfaces. I enjoy transforming design concepts into functional and visually appealing web and mobile experiences using modern UI patterns and best practices. On mobile, I specialize in Kotlin with Jetpack Compose, creating smooth and interactive Android applications.
+
+</p>
+            <p>
+           
+On the backend, I have hands-on experience with Node.js, Express, and relational databases like PostgreSQL, along with NoSQL solutions such as Firebase/Firestore. I’m skilled in building RESTful APIs and integrating them securely and efficiently. With strong problem-solving skills, a collaborative mindset, and an eagerness to learn, I bring versatility and commitment to every development team I join.
+
+
             </p>
         </div>
         <div className='about-skills'>
