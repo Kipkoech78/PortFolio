@@ -79,6 +79,10 @@
     flex-basis: 31%;
     position: relative;
 }
+.mywork p{
+    text-align: center;
+    width: 70%;
+}
 .caption{
     border-radius: 10px;
     position: absolute;

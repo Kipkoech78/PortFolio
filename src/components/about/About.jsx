@@ -23,11 +23,11 @@ function About() {
         </div>
         <div className='about-skills'>
         <div className='about-skill' > <p>React js</p> <hr style={{width: '90%'}} /> </div>
-        <div className='about-skill' > <p>Kotlin </p> <hr style={{width: '80%'}} /> </div>
+        <div className='about-skill' > <p>Kotlin </p> <hr style={{width: '85%'}} /> </div>
+        <div className='about-skill' > <p>Node,Express </p> <hr style={{width: '85%'}} /> </div>
+        <div className='about-skill' > <p>MYSQL </p> <hr style={{width: '80%'}} /> </div>
         <div className='about-skill' > <p>Javascript </p> <hr style={{width: '70%'}} /> </div>
         <div className='about-skill' > <p>Java </p> <hr style={{width: '60%'}} /> </div>
-        <div className='about-skill' > <p>MYSQL </p> <hr style={{width: '60%'}} /> </div>
-        <div className='about-skill' > <p>HTML & CSS </p> <hr style={{width: '50%'}} /> </div>
         </div>
         </div>
     </div>
@@ -37,14 +37,13 @@ function About() {
             <p>YEARS OF EXPERIENCE</p>
         </div>
         <div className='about-achievement' >
-            <h1>80+</h1>
-            <p>PROJECTS COMPLETED</p>
+            <h1>25+</h1>
+            <p>HAPPY CLIENTS</p>
         </div>
         <div className='about-achievement' >
-            <h1>80+</h1>
+            <h1>50+</h1>
             <p>PROJECTS COMPLETED</p>
         </div>
-     
     </div>
 
 

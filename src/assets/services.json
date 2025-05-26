@@ -1,32 +1,33 @@
 [
     {
-        "id":1,
-        "sname":"I value simple content",
-        "sdesc":"I've done remote work for agencies, consulted for startups, and collaborated with... "
+      "id": 1,
+      "sname": "Mobile App Development",
+      "sdesc": "Experienced in building scalable Android applications using Kotlin, with expertise in modern UI/UX design patterns, navigation architecture, and responsive layouts."
     },
     {
-        "id":2,
-        "sname":"I value simple content",
-        "sdesc":"I've done remote work for agencies, consulted for startups, and collaborated with... "
+      "id": 2,
+      "sname": "Backend Integration",
+      "sdesc": "Proficient in integrating Firebase services including Firestore, Authentication, and Cloud Functions for real-time, secure, and scalable backend support."
     },
     {
-        "id":3,
-        "sname":"I value simple content",
-        "sdesc":"I've done remote work for agencies, consulted for startups, and collaborated with... "
+      "id": 3,
+      "sname": "API Development & Consumption",
+      "sdesc": "Skilled in designing RESTful APIs and consuming third-party APIs for seamless app communication, data synchronization, and remote operations."
     },
     {
-        "id":4,
-        "sname":"I value simple content",
-        "sdesc":"I've done remote work for agencies, consulted for startups, and collaborated with... "
+      "id": 4,
+      "sname": "Database Management",
+      "sdesc": "Strong knowledge of Firestore and SQLite for handling both cloud-based and offline-first data storage, ensuring data persistence and reliability."
     },
     {
-        "id":5,
-        "sname":"I value simple content",
-        "sdesc":"I've done remote work for agencies, consulted for startups, and collaborated with... "
+      "id": 5,
+      "sname": "Cross-Team Collaboration",
+      "sdesc": "Comfortable working in collaborative environments, contributing to agile teams, and integrating feedback across design, product, and engineering teams."
     },
     {
-        "id":6,
-        "sname":"I value simple content",
-        "sdesc":"I've done remote work for agencies, consulted for startups, and collaborated with... "
+      "id": 6,
+      "sname": "Problem Solving & Debugging",
+      "sdesc": "Adept at identifying performance issues, debugging complex codebases, and delivering efficient, maintainable solutions under tight deadlines."
     }
-]
+  ]
+  

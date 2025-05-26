@@ -18,7 +18,7 @@ function MyWork() {
               alt="" />
                <div className='caption'>
     <img src={item.logo} alt='' />
-    <p> {item.service} </p>
+    <p > {item.service} </p>
 
     </div>
               
