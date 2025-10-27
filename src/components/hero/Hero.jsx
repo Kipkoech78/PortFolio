@@ -9,13 +9,13 @@ function Hero() {
     <div about="home" className="hero">
       <img src={profileImg} alt="" />
       <h1>
-        <span>I am Kipkoech Linus</span> a Android Developer and FullStack web
+        <span>I am Kipkoech Linus</span>  Android Developer and FullStack web
         Developer
       </h1>
       <p>
         {" "}
-        I am From Kericho,Kenya with 3years experience in Web development and a
-        1 year experience in Android development{" "}
+        I am From Kericho,Kenya with 4 years experience in Web development and a
+        2 year experience in Android development
       </p>
       <div className="hero-action">
         <div className="hero-con">
