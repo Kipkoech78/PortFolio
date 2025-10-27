@@ -12,7 +12,7 @@ function Service() {
                     <h2>{item.id} </h2>
                     <h3>{item.sname} </h3>
                     <p> {item.sdesc} </p>
-                    <p>Read More</p>
+                   
                     </div>
                 ))
             }
