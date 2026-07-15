@@ -1,6 +1,18 @@
 import React from "react";
 import "./About.css";
 import profileImg from "../../assets/profile-image.jpg";
+
+const skills = [
+  { name: "Kotlin / Jetpack Compose", level: 85 },
+   { name: "JavaScript", level: 82 },
+  { name: "T-SQL / SQL Server", level: 80 },
+  { name: "PostgreSQL & Firebase", level: 75 },
+  { name: "C / C++", level: 70 },
+  { name: "Python", level: 65 },
+  { name: "ERP (Dynamics NAV/BC)", level: 60 },
+  { name: "TensorFlow / Keras", level: 50 },
+];
+
 function About() {
   return (
     <div id="about" className="about">
@@ -9,73 +21,57 @@ function About() {
       </div>
       <div className="about-sections">
         <div className="about-left">
-          <img src={profileImg} alt />
+          <img src={profileImg} alt="Kipkoech Linus Ngetich" />
         </div>
         <div className="about-right">
           <div className="about-paragraph">
             <p>
-              I am a passionate and detail-oriented system developer with a
-              strong foundation in both frontend and backend development. On the
-              frontend, I work confidently with React.js, TypeScript and tailwind to build responsive and intuitive user interfaces. I
-              enjoy transforming design concepts into functional and visually
-              appealing web and mobile experiences using modern UI patterns and
-              best practices. On mobile, I specialize in Kotlin with Jetpack
-              Compose, creating smooth and interactive Android applications.
+              I'm a systems developer with a strong foundation in Android
+              development, databases, and enterprise integrations. On mobile,
+              I build with Kotlin and Jetpack Compose — implementing secure
+              authentication, REST/WebSocket integrations, and payment
+              gateways like M-Pesa and PayPal into real applications. On the
+              backend, I work extensively with SQL Server (T-SQL), PostgreSQL,
+              and Firebase, and have hands-on experience with ERP systems
+              through Microsoft Dynamics NAV / Business Central.
             </p>
             <p>
-              On the backend, I have hands-on experience with Node.js, Express,
-              and relational databases like PostgreSQL, along with NoSQL
-              solutions such as Firebase/Firestore. I’m skilled in building
-              RESTful APIs and integrating them securely and efficiently. With
-              strong problem-solving skills, a collaborative mindset, and an
-              eagerness to learn, I bring versatility and commitment to every
-              development team I join.
+              I'm currently an ICT Intern at Greenland Fedha PLC, applying
+              these skills daily in a live enterprise environment, while
+              building my own product on the side and expanding into AI/ML
+              with TensorFlow and Keras. Final-year Computer Science student
+              at Kabarak University, with a track record of shipping projects
+              through hackathons and self-directed builds — not just
+              coursework.
             </p>
           </div>
           <div className="about-skills">
-            <div className="about-skill">
-              {" "}
-              <p>React js</p> <hr style={{ width: "90%" }} />{" "}
-            </div>
-            <div className="about-skill">
-              {" "}
-              <p>Kotlin </p> <hr style={{ width: "85%" }} />{" "}
-            </div>
-            <div className="about-skill">
-              {" "}
-              <p>Node,Express </p> <hr style={{ width: "85%" }} />{" "}
-            </div>
-            <div className="about-skill">
-              {" "}
-              <p>MYSQL </p> <hr style={{ width: "80%" }} />{" "}
-            </div>
-            <div className="about-skill">
-              {" "}
-              <p>Javascript </p> <hr style={{ width: "70%" }} />{" "}
-            </div>
-            <div className="about-skill">
-              {" "}
-              <p>Java </p> <hr style={{ width: "60%" }} />{" "}
-            </div>
-            <div className="about-skill">
-              {" "}
-              <p>php </p> <hr style={{ width: "50%" }} />{" "}
-            </div>
+            {skills.map((skill, i) => (
+              <div className="about-skill" key={i}>
+                <p>{skill.name}</p>
+                <div className="about-skill-track">
+                  <div
+                    className="about-skill-fill"
+                    style={{ width: `${skill.level}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
       <div className="about-achievements">
         <div className="about-achievement">
-          <h1>4+</h1>
+          <h1>3+</h1>
           <p>YEARS OF EXPERIENCE</p>
         </div>
         <div className="about-achievement">
-          <h1>29+</h1>
-          <p>HAPPY CLIENTS</p>
+          <h1>5+</h1>
+          <p>CERTIFICATIONS EARNED</p>
         </div>
         <div className="about-achievement">
-          <h1>50+</h1>
-          <p>PROJECTS COMPLETED</p>
+          <h1>4+</h1>
+          <p>PROJECTS SHIPPED</p>
         </div>
       </div>
     </div>

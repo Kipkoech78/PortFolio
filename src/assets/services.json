@@ -1,33 +1,32 @@
 [
-    {
-      "id": 1,
-      "sname": "Mobile App Development",
-      "sdesc": "Experienced in building scalable Android applications using Kotlin, with expertise in modern UI/UX design patterns, navigation architecture, and responsive layouts."
-    },
-    {
-      "id": 2,
-      "sname": "Backend Integration",
-      "sdesc": "Proficient in integrating Firebase services including Firestore, Authentication, and Cloud Functions for real-time, secure, and scalable backend support."
-    },
-    {
-      "id": 3,
-      "sname": "API Development & Consumption",
-      "sdesc": "Skilled in designing RESTful APIs and consuming third-party APIs for seamless app communication, data synchronization, and remote operations."
-    },
-    {
-      "id": 4,
-      "sname": "Database Management",
-      "sdesc": "Strong knowledge of Firestore and SQLite for handling both cloud-based and offline-first data storage, ensuring data persistence and reliability."
-    },
-    {
-      "id": 5,
-      "sname": "Cross-Team Collaboration",
-      "sdesc": "Comfortable working in collaborative environments, contributing to agile teams, and integrating feedback across design, product, and engineering teams."
-    },
-    {
-      "id": 6,
-      "sname": "Problem Solving & Debugging",
-      "sdesc": "Adept at identifying performance issues, debugging complex codebases, and delivering efficient, maintainable solutions under tight deadlines."
-    }
-  ]
-  
+  {
+    "id": 1,
+    "sname": "Android App Development",
+    "sdesc": "Building Android applications with Kotlin and Jetpack Compose — including JWT-based authentication, Retrofit/WebSocket API integration, Dagger Hilt for dependency injection, and M-Pesa/PayPal payment integration."
+  },
+  {
+    "id": 2,
+    "sname": "Database Management",
+    "sdesc": "Designing and optimizing databases across SQL Server (T-SQL), PostgreSQL, and Firebase Firestore — writing stored procedures, triggers, and handling backup and recovery operations."
+  },
+  {
+    "id": 3,
+    "sname": "Network & Infrastructure Support",
+    "sdesc": "Configuring and troubleshooting TCP/IP networks, DHCP, and subnetting, plus supporting virtualization environments and POS hardware — hands-on experience from my ICT internship at GFL."
+  },
+  {
+    "id": 4,
+    "sname": "ERP Systems & Integration",
+    "sdesc": "Working with Microsoft Dynamics NAV / Business Central and the C/SIDE development environment to support enterprise workflows and system integrations."
+  },
+  {
+    "id": 5,
+    "sname": "API Development & Integration",
+    "sdesc": "Designing RESTful APIs and integrating third-party services for real-time data sync, secure communication, and cross-platform functionality."
+  },
+  {
+    "id": 6,
+    "sname": "AI & Machine Learning (Emerging)",
+    "sdesc": "Applying TensorFlow and Keras fundamentals to practical data problems — currently expanding this into production-grade AI/ML work."
+  }
+]

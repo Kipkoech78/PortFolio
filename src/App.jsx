@@ -8,6 +8,7 @@ import Service from './components/services/Service'
 import MyWork from './components/projects/MyWork'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
+import Experience from './experience/Experience'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <div>
       <Navbar />
       <Hero />
+      <Experience />
       <About />
       <Service />
       <MyWork />

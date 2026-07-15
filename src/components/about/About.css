@@ -4,11 +4,11 @@
     align-items: center;
     gap:80px;
     margin:80px 100px;
-    
 }
 .about-left img{
     width: 300px;
     border-radius: 80px;
+    object-fit: cover;
 }
 .about-title h1{
     padding: 0 80px;
@@ -31,33 +31,46 @@
     font-size: 20px;
     font-weight: 300;
     gap: 20px;
+    line-height: 1.6;
 }
+
 .about-skills{
- display: flex;
- flex-direction: column;
- gap: 10px;
-}
-.about-skill{
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Fixed grid: label column + track column, same at every breakpoint.
+   This is what keeps bars starting at the same x position and lets
+   the percentage widths stay visually comparable on any screen size. */
+.about-skill{
+    display: grid;
+    grid-template-columns: 190px 1fr;
     align-items: center;
+    gap: 20px;
     transition: 0.3s;
-    transition: 0.3s;
-    
 }
 
 .about-skill p{
-    min-width: 150px;
-    font-size: 24px;
+    font-size: 17px;
     font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.about-skill hr{
-    outline: none;
-    border: none;
-    width: 50%;
+
+.about-skill-track{
+    width: 100%;
     height: 8px;
     border-radius: 50px;
-    background: linear-gradient(270deg, #DA7C25  -5.09% , #B923E1 106.28% );
+    background: rgba(255,255,255,0.08);
+    overflow: hidden;
+}
+.about-skill-fill{
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #DA7C25 -5.09%, #B923E1 106.28%);
+    transition: width 0.6s ease;
 }
 
 .about-achievements{
@@ -82,24 +95,26 @@
 .about-achievement h1{
     font-size: 60px;
     font-weight: 700;
-    background: linear-gradient(270deg, #DF8908 50.41% , #B415FF 90.05% );
+    background: linear-gradient(270deg, #DF8908 50.41%, #B415FF 90.05%);
     background-clip: text;
-    -webkit-background-clip:text ;
+    -webkit-background-clip:text;
     -webkit-text-fill-color: transparent;
 }
 .about-skill:hover{
-    transform: scale(1.03);
-    
+    transform: scale(1.02);
 }
+
 @media(max-width:768px){
     .about{
         gap:30px;
         margin:50px 50px;
     }
     .about-skill{
-        flex-direction: column;
-        align-items: start;
-        gap: 20px;
+        grid-template-columns: 140px 1fr;
+        gap: 14px;
+    }
+    .about-skill p{
+        font-size: 15px;
     }
     .about-sections{
         display: flex;
@@ -107,9 +122,8 @@
         gap: 20px;
     }
     .about-left img{
-        width: 400px;
+        width: 250px;
         border-radius: 30px;
-        align-items: center;
     }
     .about-title h1{
         justify-content: center;
@@ -121,20 +135,24 @@
     .about-achievements{
         flex-direction: column;
         gap: 40px;
-        
     }
     .about-achievement{
         border: none;
-        
     }
     .about-title h1{
-        padding: 10 50px;
+        padding: 10px 50px;
         font-size: 30px;
         font-weight: 500;
     }
     .about-left img{
-        width: 300px;
+        width: 220px;
         border-radius: 30px;
-        align-items: center;
+    }
+    .about-skill{
+        grid-template-columns: 115px 1fr;
+        gap: 10px;
+    }
+    .about-skill p{
+        font-size: 13px;
     }
 }
