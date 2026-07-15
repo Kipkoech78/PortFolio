@@ -3,7 +3,7 @@ import image2 from './payments.png'
 import image3 from './mywork5.png'
 import image4 from './my-work0.png'
 import image5 from './mycert.png'
-import image6 from './ohsimg.png'
+import mktPlace from './mktPlace.webp'
 
 import logo1 from './icon1.jpg'
 import logo2 from './icon2.jpg'
@@ -17,25 +17,40 @@ import logo4 from './icon4.jpg'
 
 const myWorkData = [
   {
-    id: 1,
-    title: "Service Marketplace Platform",
-    category: "Web / Mobile · Founder Project",
+  id: 1, // adjust to next available id in your array
+  title: "Marketplace Commerce Platform",
+  category: "Full-Stack E-Commerce · Co-Founded",
+  description:
+    "Fully customizable e-commerce platform built with a friend — admins can configure layouts, categories, and branding to fit any shop, with order tracking, wishlists, and integrated M-Pesa, Airtel Money, and card checkout via Pesapal. Live and actively serving customers.",
+  tags: ["E-Commerce", "Payments Integration", "Admin Dashboard", "M-Pesa/Pesapal"],
+  image: mktPlace, // add a homepage screenshot when you have one
+  links: {
+    live: "https://chapahustle.co.ke/",
+    apk: null,
+    video: null,
+    github: null, // add if the repo is public, or leave null if it's closed-source
+  },
+},
+  {
+    id: 2,
+    title: "Service Marketplace Platform(SIGZ)",
+    category: "Web · Founder Project",
     description:
       "Platform connecting plumbers and skilled workers directly with clients who need their services. Built end-to-end, currently testing with real users.",
     tags: ["Kotlin", "Firebase"], // swap for actual stack
     image: null,
-    links: { video: null, apk: null, github: null, live: null }, // fill in what's real
+    links: { video: null, apk: null, github: null, live: "https://sigz.vercel.app/" }, // fill in what's real
   },
-  {
-    id: 2,
-    title: "HealthSphere",
-    category: "Android · Team Project (5 members)",
-    description:
-      "Healthcare app for lab test access, doctor appointments, dashboards, and real-time updates. Showcased at the Central Rift Innovation Week (CRIW) Innovation Challenge.",
-    tags: ["Kotlin", "Firebase Firestore", "Jetpack Compose"],
-    image: null,
-    links: { video: null, apk: null, github: null, live: null },
-  },
+  // {
+  //   id: 2,
+  //   title: "HealthSphere",
+  //   category: "Android · Team Project (5 members)",
+  //   description:
+  //     "Healthcare app for lab test access, doctor appointments, dashboards, and real-time updates. Showcased at the Central Rift Innovation Week (CRIW) Innovation Challenge.",
+  //   tags: ["Kotlin", "Firebase Firestore", "Jetpack Compose"],
+  //   image: null,
+  //   links: { video: null, apk: null, github: null, live: null },
+  // },
   {
     id: 3,
     title: "Quantitative Forecasting App",
