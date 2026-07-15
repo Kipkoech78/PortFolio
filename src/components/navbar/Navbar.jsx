@@ -1,48 +1,85 @@
-import React, { useRef, useState } from 'react'
-import logo from '../../assets/logo.jpg'
-import './Navbar.css'
-import menuicon from '../../assets/menu.png'
-import CloseIcon from '@mui/icons-material/Close';
-import closingIcon from '../../assets/delete.png'
-import MenuOpenIcon from '@mui/icons-material/MenuOpen';
-import line from '../../assets/brush-line.png'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import React, { useState, useEffect } from "react";
+import logo from "../../assets/logo.jpg";
+import "./Navbar.css";
+import CloseIcon from "@mui/icons-material/Close";
+import MenuOpenIcon from "@mui/icons-material/MenuOpen";
+import line from "../../assets/brush-line.png";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+
+const navLinks = [
+  { id: "home", label: "Home", href: "#home" },
+  { id: "about", label: "About", href: "#about" },
+  { id: "experience", label: "Experience", href: "#experience" },
+  { id: "projects", label: "Projects", href: "#projects" },
+  { id: "contact", label: "Contact", href: "#contact" },
+];
+
 function Navbar() {
-  const [menu, setMenu] = useState("home")
-  const menuRef = useRef();
-  const openMenu = (()=>{
-    menuRef.current.style.right = '0'
+  const [menu, setMenu] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  })
-  const closeMenu = (()=>{
-    menuRef.current.style.right = '-350px'
-    
-  })
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Lock body scroll while the mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
+  const handleSelect = (id) => {
+    setMenu(id);
+    setMenuOpen(false);
+  };
+
   return (
-    <div className='navbar' >
-    <img className='image-logo' src={logo} alt='' />
-  
-    {/* <img onClick={openMenu} className='menu-logo' src={menuicon} alt='' /> */}
-    <ul ref={menuRef} className='navMenu'>
-    {/* <img onClick={closeMenu} src={closingIcon} /> */}
-    <div  onClick={closeMenu}   className='closeIcon' ><CloseIcon /></div>
-        <li> <AnchorLink className='anchorLink'  href='#home'>  <p onClick={(()=> setMenu("home"))}> Home </p></AnchorLink>  {menu ==="home" ? <img  className='lineImg'  src={line} /> : <></> } </li>
-        <li  ><AnchorLink className='anchorLink' offset={50} href='#about' ><p  onClick={(()=> setMenu("about"))}>About me</p> </AnchorLink> {menu ==="about" ? <img className='lineImg'  src={line} /> : <></> } </li>
-        <li><AnchorLink className='anchorLink' offset={50} href='#services'> <p onClick={(()=> setMenu("services"))}>services</p></AnchorLink>  {menu ==="services" ? <img className='lineImg' src={line} /> : <></> } </li>
-         <li><AnchorLink className='anchorLink' offset={50} href='#skills'> <p onClick={(()=> setMenu("skills"))}>skills</p></AnchorLink>  {menu ==="skills" ? <img className='lineImg' src={line} /> : <></> } </li>
-         <li><AnchorLink className='anchorLink' offset={50} href='#experience'> <p onClick={(()=> setMenu("experience"))}>experience</p></AnchorLink>  {menu ==="experience" ? <img className='lineImg' src={line} /> : <></> } </li>
-         <li><AnchorLink className='anchorLink' offset={50} href='#recommendations'> <p onClick={(()=> setMenu("recommendations"))}>recommendations</p></AnchorLink>  {menu ==="recommendations" ? <img className='lineImg' src={line} /> : <></> } </li>
-        
-        <li><AnchorLink className='anchorLink' offset={50} href='#projects'> <p onClick={(()=> setMenu("tools"))}>Projects</p> </AnchorLink> {menu ==="tools" ? <img className='lineImg' src={line} /> : <></> } </li>
-        <li><AnchorLink className='anchorLink' offset={50} href='#contact'> <p onClick={(()=> setMenu("contact"))}>contact</p> </AnchorLink> {menu ==="contact" ? <img className='lineImg'  src={line} /> : <></> } </li>
+    <div className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
+      <img className="image-logo" src={logo} alt="Linus Ngetich logo" />
 
-    </ul>
-    <div onClick={()=> window.location.href = "https://github.com/Kipkoech78"}
-     className='nav-connect' > <p className='anchorLink' offset={50} >Github.com </p> </div>
-    <div  onClick={openMenu}  className='menu-logo' > <MenuOpenIcon fontSize='large' /></div>
+      <ul className={`navMenu ${menuOpen ? "navMenu-open" : ""}`}>
+        <div className="navMenu-header">
+          <span className="navMenu-brand">Menu</span>
+          <div
+            onClick={() => setMenuOpen(true)}
+            className={`menu-logo ${menuOpen ? "menu-logo-hidden" : ""}`}
+          >
+            <MenuOpenIcon fontSize="large" />
+          </div>
+        </div>
+
+        {navLinks.map((link) => (
+          <li key={link.id}>
+            <AnchorLink
+              className="anchorLink"
+              offset={70}
+              href={link.href}
+              onClick={() => handleSelect(link.id)}
+            >
+              <p>{link.label}</p>
+            </AnchorLink>
+            {menu === link.id && <img className="lineImg" src={line} alt="" />}
+          </li>
+        ))}
+      </ul>
+
+      {menuOpen && <div className="nav-overlay" onClick={() => setMenuOpen(false)}></div>}
+
+      <div
+        onClick={() => window.open("https://github.com/Kipkoech78", "_blank")}
+        className="nav-connect"
+      >
+        <p>GitHub</p>
+      </div>
+
+      <div onClick={() => setMenuOpen(true)} className="menu-logo">
+        <MenuOpenIcon fontSize="large" />
+      </div>
     </div>
-   
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

@@ -1,111 +1,180 @@
+*{
+    box-sizing: border-box;
+}
+
 .navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 120px;
+    padding: 15px 120px;
+    background: transparent;
+    transition: 0.3s;
 }
+.navbar-scrolled{
+    background: rgba(18, 18, 18, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+
 .image-logo{
-    min-width: 80px;
-    max-width: 100px;
-    height: 80px;
+    min-width: 55px;
+    max-width: 55px;
+    height: 55px;
     border-radius: 50%;
-    border: 4px solid #B923E1;
+    border: 3px solid #B923E1;
 }
+
 .lineImg{
-    width: 60px;
-    margin: 0;
-    height: 15px;
-    
+    width: 50px;
+    height: 12px;
 }
+
 .navMenu{
     display: flex;
-    gap:15px;
-    text-decoration: none;
+    align-items: center;
+    gap: 35px;
     list-style: none;
-    font-size: 20px;
-    
+    font-size: 16px;
+    margin: 0;
 }
-.nav-connect{
-    padding: 10px 24px;
-    border-radius: 50px;
-    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.5s ;
+.navMenu-header{
+    display: none;
+}
 
-}
-.nav-connect:hover{
-    transform: scale(1.05);
-}
 .navMenu li{
     display: flex;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
     align-items: center;
-    position: relative;
-    
 }
 .navMenu p{
-    font-size: 24px;
+    font-size: 16px;
+    margin: 0;
 }
 .anchorLink{
     text-decoration: none;
     color: white;
 }
-.closeIcon{
+
+.nav-connect{
+    padding: 10px 22px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.nav-connect p{ margin: 0; }
+.nav-connect:hover{
+    transform: scale(1.05);
+}
+
+.closeIcon, .menu-logo{
     display: none;
 }
-.menu-logo{
+
+.nav-overlay{
     display: none;
 }
-@media(max-width:868px){
-    .nav-connect{
-        display: hidden;
-    }
+
+/* Body scroll lock while mobile menu is open needs the leftover space
+   accounted for — handled in JS via document.body.style.overflow */
+
+@media(max-width:900px){
     .navbar{
-        margin: 20px 50px;
+        padding: 15px 24px;
     }
+
     .nav-connect{
         display: none;
     }
+
     .menu-logo{
+        display: flex;
+        cursor: pointer;
+        position: relative;
+        z-index: 12;
+    }
+
+    /* Overlay dims the page behind the panel so focus stays on the menu */
+    .nav-overlay{
         display: block;
         position: fixed;
-        right: 30px;
-        
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 10;
     }
-    .menu-logo{
-        display: block;
-    }
-    .closeIcon{
-        position: relative;
-        top: 30px;
-        left: 290px;
-        width: 40px;
-    }
-    .closeIcon{
-        display: block;
-    }
+
+    /* Sized in vw with a max cap in px — this is the actual fix.
+       It can never be wider than the screen, unlike a fixed 350px panel. */
     .navMenu{
         position: fixed;
-        align-items: center;
-        flex-direction: column;
         top: 0;
-        gap: 30px;
-        background-color: #1f0016;
-        width: 350px;
+        right: 0;
+        z-index: 11;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 78vw;
+        max-width: 320px;
         height: 100%;
-        z-index: 2;
-        transition: right 0.5s;
-        right: -350px;
-        align-items: start;
-        
+        background-color: #1f0016;
+        padding: 0 0 30px;
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+        overflow-y: auto;
     }
+    .navMenu-open{
+        transform: translateX(0);
+    }
+
+    .navMenu-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 22px 24px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        margin-bottom: 10px;
+    }
+    .lineImg{
+    width: 10px;
+    height: 10px;
+    }
+    .navMenu-brand{
+        font-size: 14px;
+        opacity: 0.6;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .closeIcon{
+        display: flex;
+        cursor: pointer;
+    }
+
     .navMenu li{
         flex-direction: row;
-        padding-left: 100px;
-        font-size: 30px;
-        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 24px;
+        font-size: 20px;
+        gap: 10px;
+        width: 100%;
     }
+    .navMenu p{
+        font-size: 18px;
+    }
+   
+}
+@media(max-width:600px){
+     .lineImg{
+        display: none;
+     }
 }
