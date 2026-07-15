@@ -11,7 +11,7 @@ function PromoPopup() {
 
     const onScroll = () => {
       const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-      if (scrollable <= 0) return; // page not tall enough to scroll yet
+      if (scrollable <= 0) return;
 
       const scrollPercent = (window.scrollY / scrollable) * 100;
 
@@ -23,7 +23,7 @@ function PromoPopup() {
     };
 
     window.addEventListener("scroll", onScroll);
-    onScroll(); // check immediately in case the page loads already scrolled
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -32,7 +32,15 @@ function PromoPopup() {
     setDismissed(true);
   };
 
-  const requestDemo = () => {
+  const requestDemoWhatsapp = () => {
+    const phone = "254719200522"; // international format, no + or leading 0
+    const message = encodeURIComponent(
+      "Hi Linus, I'd like to see a demo of your Chapahustle e-commerce platform for my shop."
+    );
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+  };
+
+  const requestDemoEmail = () => {
     window.location.href =
       "mailto:linusngetich78@gmail.com?subject=Demo request - Chapahustle platform&body=Hi Linus, I'd like to see a demo of your e-commerce platform for my shop.";
   };
@@ -49,9 +57,19 @@ function PromoPopup() {
         order tracking and M-Pesa/card checkout. I build these for shops too.
       </p>
       <div className="promo-actions">
-        <button className="promo-btn-primary" onClick={requestDemo}>Request a demo</button>
-        <a href="https://chapahustle.co.ke/" target="_blank" rel="noopener noreferrer" className="promo-btn-secondary">
-          See it live
+        <button className="promo-btn-primary" onClick={requestDemoWhatsapp}>
+          Request demo on WhatsApp
+        </button>
+        <button className="promo-btn-secondary" onClick={requestDemoEmail}>
+          Request via email instead
+        </button>
+        <a
+          href="https://chapahustle.co.ke/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="promo-link-live"
+        >
+          Or see it live →
         </a>
       </div>
     </div>

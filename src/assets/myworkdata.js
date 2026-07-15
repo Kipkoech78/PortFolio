@@ -2,7 +2,7 @@ import image1 from './my-work-1.png'
 import image2 from './payments.png'
 import image3 from './mywork5.png'
 import image4 from './my-work0.png'
-import image5 from './mycert.png'
+import sigz from './sigz.webp'
 import mktPlace from './mktPlace.webp'
 
 import logo1 from './icon1.jpg'
@@ -34,11 +34,11 @@ const myWorkData = [
   {
     id: 2,
     title: "Service Marketplace Platform(SIGZ)",
-    category: "Web · Founder Project",
+    category: "Web platform · Founder Project",
     description:
       "Platform connecting plumbers and skilled workers directly with clients who need their services. Built end-to-end, currently testing with real users.",
-    tags: ["Kotlin", "Firebase"], // swap for actual stack
-    image: null,
+    tags: ["React JS", "Email Js", "Tailwind css"], // swap for actual stack
+    image: sigz,
     links: { video: null, apk: null, github: null, live: "https://sigz.vercel.app/" }, // fill in what's real
   },
   // {

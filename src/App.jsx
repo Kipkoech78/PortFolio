@@ -18,7 +18,6 @@ function App() {
        <PromoPopup />
       <Navbar />
       <Hero />
-     
       <Experience />
       <About />
       <Service />
