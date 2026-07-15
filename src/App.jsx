@@ -9,14 +9,16 @@ import MyWork from './components/projects/MyWork'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
 import Experience from './experience/Experience'
+import PromoPopup from './ad/PromoPopUp'
 
 function App() {
 
   return (
     <div>
-      
+       <PromoPopup />
       <Navbar />
       <Hero />
+     
       <Experience />
       <About />
       <Service />
