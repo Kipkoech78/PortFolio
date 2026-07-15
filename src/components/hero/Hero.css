@@ -1,14 +1,26 @@
 .hero{
     display: flex;
+    justify-content: center;
+}
+
+/* Single shared column — every child below is width:100% of THIS box,
+   so nothing can drift off-axis from anything else. */
+.hero-inner{
+    width: 100%;
+    max-width: 640px;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 35px;
+    gap: 24px;
+    padding: 0 24px;
 }
+
 @keyframes pulse{
     0%{ box-shadow: 0 0 0 0 rgba(46,204,113,0.6); }
     70%{ box-shadow: 0 0 0 8px rgba(46,204,113,0); }
     100%{ box-shadow: 0 0 0 0 rgba(46,204,113,0); }
 }
+
 .hero-badge{
     margin-top: 80px;
     display: flex;
@@ -20,7 +32,7 @@
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.3px;
-} 
+}
 .hero-badge-dot{
     width: 8px;
     height: 8px;
@@ -29,8 +41,8 @@
     box-shadow: 0 0 0 0 rgba(46,204,113,0.6);
     animation: pulse 2s infinite;
 }
-.hero img{
-    margin-top: 10px;
+
+.hero-inner img{
     width: 160px;
     height: 160px;
     object-fit: cover;
@@ -40,61 +52,74 @@
       linear-gradient(#121212,#121212) padding-box,
       linear-gradient(270deg, #DA7C25 10%, #B923E1 100%) border-box;
 }
-.hero h1{
+
+.hero-inner h1{
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 70%;
+    width: 100%;
     line-height: 1.25;
     font-size: 40px;
     font-weight: 600;
+    margin: 0;
 }
-.hero h1 span{
-    background: linear-gradient(270deg, #DA7C25 10%, #B923E1 100%)  ;
+.hero-inner h1 span{
+    background: linear-gradient(270deg, #DA7C25 10%, #B923E1 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.hero p{
-    line-height: 20px;
+
+.hero-inner > p{
+    line-height: 24px;
     text-align: center;
-    width: 50%;
-    font-size: 20px;
+    width: 100%;
+    font-size: 18px;
+    margin: 0;
+    opacity: 0.85;
 }
+
 .hero-stats{
     display: flex;
+    justify-content: center;
+    width: 100%;
     gap: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 10px 0 5px;
-
+}
+.hero-stat{
+    text-align: center;
 }
 .hero-stat h3{
-    text-align: left;
-
     font-size: 26px;
     font-weight: 700;
     background: linear-gradient(270deg, #DA7C25 10%, #B923E1 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin: 0;
 }
+.hero-stat p{
+    font-size: 13px;
+    opacity: 0.7;
+    margin: 4px 0 0;
+}
+
 .hero a{
     text-decoration: none;
     color: white;
 }
+
 .hero-action{
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
     gap: 20px;
-    margin: 15px 0 10px;
     font-weight: 500;
-    
 }
 .hero-con{
     padding: 18px 38px;
     border-radius: 50px;
-    background: linear-gradient(270deg, #DA7C25  -5.09% , #B923E1 106.07%);
+    background: linear-gradient(270deg, #DA7C25 -5.09%, #B923E1 106.07%);
     cursor: pointer;
     text-decoration: none;
     color: white;
@@ -124,15 +149,11 @@
     transform: scale(1.02);
     border-color: #B923E1;
 }
-.hero-resume:hover{
-    transform: scale(1.02);
-    border-color: #B923E1;
-}
-.hero-con:hover{
-    border: 2px solid white;
-}
+
 .hero-links{
     display: flex;
+    justify-content: center;
+    width: 100%;
     gap: 20px;
     margin-bottom: 60px;
     font-size: 14px;
@@ -147,26 +168,27 @@
     color: white;
 }
 
-@media(max-width:768px) {
-    
-    .hero h1{
-        text-align: center;
-        width: 400px;
+@media(max-width:768px){
+    .hero-inner{
+        gap: 20px;
+        padding: 0 20px;
+    }
+    .hero-inner h1{
         font-size: 30px;
         font-weight: 500;
     }
-    .hero p{
+    .hero-inner > p{
         font-size: 16px;
-    }
-    .hero-con{
-        padding: 15px 45px;
-        border-radius: 30px;
-        
+        line-height: 22px;
     }
     .hero-stats{
         gap: 30px;
     }
-     .hero-connect{
+    .hero-con{
+        padding: 15px 45px;
+        border-radius: 30px;
+    }
+    .hero-connect{
         padding: 14px 22px;
         border-radius: 30px;
     }
@@ -174,16 +196,17 @@
         padding: 15px 60px;
         border-radius: 30px;
         border: 1px solid white;
-       
-        
     }
 }
-@media(max-width:658px) {
-    .hero{
-        gap: 20px;
+
+@media(max-width:658px){
+    .hero-inner{
+        gap: 16px;
     }
-    .hero img{
-        margin-top: 30px;
+    .hero-inner img{
+        margin-top: 10px;
+        width: 130px;
+        height: 130px;
         border-radius: 20%;
     }
     .hero-action{
@@ -196,9 +219,7 @@
     .hero-stat h3{
         font-size: 20px;
     }
-    .hero h1{
-        text-align: center;
-        width: 250px;
+    .hero-inner h1{
         font-size: 25px;
         font-weight: 500;
     }
