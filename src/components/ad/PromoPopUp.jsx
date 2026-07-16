@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./PromoPopUp.css";
+import "./PromoPopup.css";
 
 function PromoPopup() {
   const [visible, setVisible] = useState(false);
