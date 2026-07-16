@@ -41,16 +41,6 @@ const myWorkData = [
     image: sigz,
     links: { video: null, apk: null, github: null, live: "https://sigz.vercel.app/" }, // fill in what's real
   },
-  // {
-  //   id: 2,
-  //   title: "HealthSphere",
-  //   category: "Android · Team Project (5 members)",
-  //   description:
-  //     "Healthcare app for lab test access, doctor appointments, dashboards, and real-time updates. Showcased at the Central Rift Innovation Week (CRIW) Innovation Challenge.",
-  //   tags: ["Kotlin", "Firebase Firestore", "Jetpack Compose"],
-  //   image: null,
-  //   links: { video: null, apk: null, github: null, live: null },
-  // },
   {
   id: 3,
   title: "News App",
@@ -64,7 +54,7 @@ const myWorkData = [
     apk: "https://github.com/Kipkoech78/NewsAPP/releases/download/v1-release/newsApp.apk",
     github: "https://github.com/Kipkoech78/NewsAPP",
     live: "https://github.com/Kipkoech78/NewsAPP/blob/main/README.md",
-  },
+  }
 },
   {
     id: 4,
