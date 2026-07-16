@@ -52,15 +52,20 @@ const myWorkData = [
   //   links: { video: null, apk: null, github: null, live: null },
   // },
   {
-    id: 3,
-    title: "Quantitative Forecasting App",
-    category: "Python / Data Science · Self-Directed",
-    description:
-      "Financial forecasting application applying data science and forecasting techniques to market data — self-directed project extending classroom AI/ML learning into a deployed tool.",
-    tags: ["Python", "Streamlit", "NumPy", "PyTorch"],
-    image: null,
-    links: { video: null, apk: null, github: null, live: null },
+  id: 3,
+  title: "News App",
+  category: "Android · Self-Directed",
+  description:
+    "A news app built to sharpen my Android skills on a real-world project — implementing modern architecture with Jetpack Compose, offline caching via Room, paginated feeds with Paging 3, and dependency injection with Dagger Hilt.",
+  tags: ["Kotlin", "Jetpack Compose", "Retrofit", "Room", "Dagger Hilt", "Paging 3"],
+  image: null,
+  links: {
+    video: null,
+    apk: "https://github.com/Kipkoech78/NewsAPP/releases/download/v1-release/newsApp.apk",
+    github: "https://github.com/Kipkoech78/NewsAPP",
+    live: "https://github.com/Kipkoech78/NewsAPP/blob/main/README.md",
   },
+},
   {
     id: 4,
     title: "Mobile Risk Analysis System",
