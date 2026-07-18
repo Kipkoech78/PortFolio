@@ -1,7 +1,4 @@
-import image1 from './my-work-1.png'
-import image2 from './payments.png'
-import image3 from './mywork5.png'
-import image4 from './my-work0.png'
+import healthSphereLogo from './logoHealthSphere.png'
 import sigz from './sigz.webp'
 import mktPlace from './mktPlace.webp'
 
@@ -75,6 +72,18 @@ const myWorkData = [
     tags: ["Kotlin", "QR Code", "Web"],
     image: null,
     links: { video: null, apk: null, github: null, live: null },
+  },
+    {
+    id: 6,
+    title: "health Sphere",
+    category: "Android Application · Team Project",
+    description:
+      "The platform was an inovative challange aimed to ease the communication and user drugs awareness before putchasing drugs over the counter\
+       and streamlime medical operation wit privatized apointment services for doctors who will like to earn extra income outside their daily duties\
+       LIMITATIONS: The system was too big for scalling  ",
+    tags: ["React JS", "Email Js", "Tailwind css"], // swap for actual stack
+    image: healthSphereLogo,
+    links: { video: null, apk: null, github: "https://github.com/Kipkoech78/Health-Sphere", live: "https://sigz.vercel.app/" }, // fill in what's real
   },
 ];
 

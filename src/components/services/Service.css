@@ -15,7 +15,7 @@
     gap: 20px;
     padding: 50px;
     justify-content: center;
-    max-height: 250px;
+    min-height:fit-content;
     transition: 0.4s;
     cursor: pointer;
 }
@@ -50,6 +50,7 @@
     }
     .service-container{
         display: grid;
+        min-height: fit-content;
         grid-template-columns: 1fr 1fr;
         gap: 30px;
         margin-bottom: 40px;
@@ -58,6 +59,7 @@
         flex-direction: column;
         border: 2px solid white;
         max-width: 300px;
+        min-height: fit-content;
         gap: 20px;
         padding: 20px;
         justify-content: center;
