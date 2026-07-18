@@ -60,13 +60,12 @@ function Contact() {
             placeholder="Enter your message"
             required
           >
-            {" "}
           </textarea>
           <div className="submission">
             <button className="submit-btn" type="submit">
               Submit now
-            </button>{" "}
-            <span>{result}</span>{" "}
+            </button>
+            <span>{result}</span>
           </div>
         </form>
       </div>
