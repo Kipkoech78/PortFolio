@@ -26,14 +26,18 @@ function Navbar() {
   }, []);
 
   // Lock body scroll while the mobile menu is open
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [menuOpen]);
+  // useEffect(() => {
+    
+  //   document.body.style.overflow = menuOpen ? "hidden" : "";
+  //   return () => { document.body.style.overflow = ""; };
+  // }, [menuOpen]);
+  const closeMenu =()=> setMenuOpen(false)
+  const openMenu =()=> setMenuOpen(true)
+
 
   const handleSelect = (id) => {
     setMenu(id);
-    setMenuOpen(false);
+    closeMenu();
   };
 
   return (
@@ -43,11 +47,8 @@ function Navbar() {
       <ul className={`navMenu ${menuOpen ? "navMenu-open" : ""}`}>
         <div className="navMenu-header">
           <span className="navMenu-brand">Menu</span>
-          <div
-            onClick={() => setMenuOpen(true)}
-            className={`menu-logo ${menuOpen ? "menu-logo-hidden" : ""}`}
-          >
-            <MenuOpenIcon fontSize="large" />
+          <div onClick={closeMenu} className="closeIcon" >
+            <CloseIcon fontSize="large" />
           </div>
         </div>
 
@@ -61,12 +62,12 @@ function Navbar() {
             >
               <p>{link.label}</p>
             </AnchorLink>
-            {menu === link.id && <img className="lineImg" src={line} alt="" />}
+            {menu === link.id && <img className="lineImg" src={line} alt="line IMG" />}
           </li>
         ))}
       </ul>
 
-      {menuOpen && <div className="nav-overlay" onClick={() => setMenuOpen(false)}></div>}
+      {menuOpen && <div className="nav-overlay" onClick={closeMenu}></div>}
 
       <div
         onClick={() => window.open("https://github.com/Kipkoech78", "_blank")}
@@ -74,10 +75,15 @@ function Navbar() {
       >
         <p>GitHub</p>
       </div>
-
+      {!menuOpen && (
+        <div onClick={openMenu} className="menu-logo" >
+          <MenuOpenIcon fontSize="large" />
+        </div>
+      )}
+{/* 
       <div onClick={() => setMenuOpen(true)} className="menu-logo">
         <MenuOpenIcon fontSize="large" />
-      </div>
+      </div> */}
     </div>
   );
 }
