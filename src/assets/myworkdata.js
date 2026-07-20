@@ -81,7 +81,7 @@ const myWorkData = [
       "The platform was an inovative challange aimed to ease the communication and user drugs awareness before putchasing drugs over the counter\
        and streamlime medical operation wit privatized apointment services for doctors who will like to earn extra income outside their daily duties\
        LIMITATIONS: The system was too big for scalling  ",
-    tags: ["React JS", "Email Js", "Tailwind css"], // swap for actual stack
+    tags: ["Kotlin", "XML","jAVA", "FireStore"], // swap for actual stack
     image: healthSphereLogo,
     links: { video: null, apk: null, github: "https://github.com/Kipkoech78/Health-Sphere", live: "https://sigz.vercel.app/" }, // fill in what's real
   },
