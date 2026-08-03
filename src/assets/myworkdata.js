@@ -39,21 +39,30 @@ const myWorkData = [
     image: sigz,
     links: { video: null, apk: null, github: null, live: "https://sigz.vercel.app/" }, // fill in what's real
   },
-  {
+   {
   id: 3,
-  title: "News App",
-  category: "Android · Self-Directed",
+  title: "Li-Max-WiFi",
+  category: "Business Website · SaaS Landing Page",
   description:
-    "A news app built to sharpen my Android skills on a real-world project — implementing modern architecture with Jetpack Compose, offline caching via Room, paginated feeds with Paging 3, and dependency injection with Dagger Hilt.",
-  tags: ["Kotlin", "Jetpack Compose", "Retrofit", "Room", "Dagger Hilt", "Paging 3"],
-  image: null,
+    "A modern marketing website built to showcase and sell the Li-Max-WiFi hotspot billing system. The platform explains the installation process, pricing, payment options, live customer workflow, and generates leads through WhatsApp, email, and contact forms. Although system installations are performed manually, the website streamlines customer acquisition and demonstrates how hotspot owners can automate WiFi billing, customer authentication, payments, and account management.",
+  tags: [
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "Framer Motion",
+    "EmailJS",
+    "WhatsApp Integration",
+    "Responsive Design"
+  ],
+  image: limaxLogo,
   links: {
     video: null,
-    apk: "https://github.com/Kipkoech78/NewsAPP/releases/download/v1-release/newsApp.apk",
-    github: "https://github.com/Kipkoech78/NewsAPP",
-    live: "https://github.com/Kipkoech78/NewsAPP/blob/main/README.md",
-  }
+    apk: null,
+    github: null, // or your private/public repository
+    live: "https://your-domain.com"
+  },
 },
+
   {
     id: 4,
     title: "Mobile Risk Analysis System",
@@ -86,29 +95,22 @@ const myWorkData = [
     image: healthSphereLogo,
     links: { video: null, apk: null, github: "https://github.com/Kipkoech78/Health-Sphere", live: "https://sigz.vercel.app/" }, // fill in what's real
   },
- {
+    {
   id: 7,
-  title: "Li-Max-WiFi",
-  category: "Business Website · SaaS Landing Page",
+  title: "News App",
+  category: "Android · Self-Directed",
   description:
-    "A modern marketing website built to showcase and sell the Li-Max-WiFi hotspot billing system. The platform explains the installation process, pricing, payment options, live customer workflow, and generates leads through WhatsApp, email, and contact forms. Although system installations are performed manually, the website streamlines customer acquisition and demonstrates how hotspot owners can automate WiFi billing, customer authentication, payments, and account management.",
-  tags: [
-    "React",
-    "Vite",
-    "Tailwind CSS",
-    "Framer Motion",
-    "EmailJS",
-    "WhatsApp Integration",
-    "Responsive Design"
-  ],
-  image: limaxLogo,
+    "A news app built to sharpen my Android skills on a real-world project — implementing modern architecture with Jetpack Compose, offline caching via Room, paginated feeds with Paging 3, and dependency injection with Dagger Hilt.",
+  tags: ["Kotlin", "Jetpack Compose", "Retrofit", "Room", "Dagger Hilt", "Paging 3"],
+  image: null,
   links: {
     video: null,
-    apk: null,
-    github: null, // or your private/public repository
-    live: "https://your-domain.com"
-  },
+    apk: "https://github.com/Kipkoech78/NewsAPP/releases/download/v1-release/newsApp.apk",
+    github: "https://github.com/Kipkoech78/NewsAPP",
+    live: "https://github.com/Kipkoech78/NewsAPP/blob/main/README.md",
+  }
 },
+
 ];
 
 export default myWorkData;
