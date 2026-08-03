@@ -6,6 +6,7 @@ import logo1 from './icon1.jpg'
 import logo2 from './icon2.jpg'
 import logo3 from './icon3.jpg'
 import logo4 from './icon4.jpg'
+import limaxLogo from './limaxLogo.jpg'
 
 // myworkdata.js
 // Add real screenshots/thumbnails as you get them:
@@ -85,6 +86,29 @@ const myWorkData = [
     image: healthSphereLogo,
     links: { video: null, apk: null, github: "https://github.com/Kipkoech78/Health-Sphere", live: "https://sigz.vercel.app/" }, // fill in what's real
   },
+ {
+  id: 7,
+  title: "Li-Max-WiFi",
+  category: "Business Website · SaaS Landing Page",
+  description:
+    "A modern marketing website built to showcase and sell the Li-Max-WiFi hotspot billing system. The platform explains the installation process, pricing, payment options, live customer workflow, and generates leads through WhatsApp, email, and contact forms. Although system installations are performed manually, the website streamlines customer acquisition and demonstrates how hotspot owners can automate WiFi billing, customer authentication, payments, and account management.",
+  tags: [
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "Framer Motion",
+    "EmailJS",
+    "WhatsApp Integration",
+    "Responsive Design"
+  ],
+  image: limaxLogo,
+  links: {
+    video: null,
+    apk: null,
+    github: null, // or your private/public repository
+    live: "https://your-domain.com"
+  },
+},
 ];
 
 export default myWorkData;
