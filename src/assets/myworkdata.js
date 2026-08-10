@@ -72,7 +72,7 @@ const myWorkData = [
       "Mobile security solution monitoring app behaviour and permissions, with VPN-based network filtering to flag suspicious domains and generate risk reports.",
     tags: ["Kotlin", "VPN/Network Security"],
     image: mobileRisk,
-    links: { video: null, apk: null, github: "https://github.com/Kipkoech78/MobileRiskAnalysis-App",
+    links: { video: null, apk: "https://github.com/Kipkoech78/MobileRiskAnalysis-App/releases/download/v1/mobileRiskAnalysis.apk", github: "https://github.com/Kipkoech78/MobileRiskAnalysis-App",
        live: "https://github.com/Kipkoech78/MobileRiskAnalysis-App/releases/download/v1/mobileRiskAnalysis.apk" },
   },
   {
