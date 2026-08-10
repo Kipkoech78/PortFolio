@@ -6,6 +6,7 @@ import logo1 from './icon1.jpg'
 import logo2 from './icon2.jpg'
 import logo3 from './icon3.jpg'
 import logo4 from './icon4.jpg'
+import mobileRisk from './mobileRisk.jpg'
 import limaxLogo from './limaxLogo.jpg'
 
 // myworkdata.js
@@ -57,9 +58,9 @@ const myWorkData = [
   image: limaxLogo,
   links: {
     video: null,
-    apk: null,
+    apk: "https://li-max.vercel.app/",
     github: null, // or your private/public repository
-    live: "https://your-domain.com"
+    live: "https://li-max.vercel.app/"
   },
 },
 
@@ -70,8 +71,9 @@ const myWorkData = [
     description:
       "Mobile security solution monitoring app behaviour and permissions, with VPN-based network filtering to flag suspicious domains and generate risk reports.",
     tags: ["Kotlin", "VPN/Network Security"],
-    image: null,
-    links: { video: null, apk: null, github: null, live: null },
+    image: mobileRisk,
+    links: { video: null, apk: null, github: "https://github.com/Kipkoech78/MobileRiskAnalysis-App",
+       live: "https://github.com/Kipkoech78/MobileRiskAnalysis-App/releases/download/v1/mobileRiskAnalysis.apk" },
   },
   {
     id: 5,
