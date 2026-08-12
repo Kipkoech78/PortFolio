@@ -58,7 +58,7 @@ const myWorkData = [
   image: limaxLogo,
   links: {
     video: null,
-    apk: "https://li-max.vercel.app/",
+    apk: null,
     github: null, // or your private/public repository
     live: "https://li-max.vercel.app/"
   },
