@@ -7,7 +7,7 @@
    so nothing can drift off-axis from anything else. */
 .hero-inner{
     width: 100%;
-    max-width: 640px;
+    max-width: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,6 +77,28 @@
     font-size: 18px;
     margin: 0;
     opacity: 0.85;
+}
+.hero-learning {
+  max-width: 640px;
+  margin: 0 auto 24px;
+  padding: 12px 16px;
+  border-left: 3px solid currentColor;
+  text-align: left;
+  opacity: 0.9;
+}
+
+.hero-learning-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.hero-learning p {
+  margin: 0;
+  font-size: 0.95rem;
 }
 
 .hero-stats{

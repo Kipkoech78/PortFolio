@@ -27,6 +27,15 @@ function Hero() {
           an ICT Intern at Greenland Fedha PLC.
         </p>
 
+        <div className="hero-learning">
+          <span className="hero-learning-label">Currently learning</span>
+          <p>
+            Microsoft Dynamics NAV (Navision) ERP development: building in C/SIDE
+            and C/AL on NAV 2016, with a keen interest in enterprise systems and
+            moving toward Business Central.
+          </p>
+        </div>
+
         <div className="hero-stats">
           <div className="hero-stat">
             <h3>3+</h3>

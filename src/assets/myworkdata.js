@@ -1,47 +1,80 @@
 import healthSphereLogo from './logoHealthSphere.png'
-import sigz from './sigz.webp'
-import mktPlace from './mktPlace.webp'
 
-import logo1 from './icon1.jpg'
-import logo2 from './icon2.jpg'
-import logo3 from './icon3.jpg'
+
+import ufundiHome from './ufundiHome.jpg'
+import redCross from './redcross.jpg'
+import dynamicsNav from './microsoftNav.jpg'
 import logo4 from './icon4.jpg'
 import mobileRisk from './mobileRisk.jpg'
 import limaxLogo from './limaxLogo.jpg'
 
-// myworkdata.js
-// Add real screenshots/thumbnails as you get them:
-// import shImg from './healthsphere.png';  then set image: shImg below.
-// Until then, image: null shows a clean gradient placeholder — no broken <img> tags.
 
 const myWorkData = [
   {
-  id: 1, // adjust to next available id in your array
-  title: "Marketplace Commerce Platform",
-  category: "Full-Stack E-Commerce · Co-Founded",
+  id: 1, 
+  title: "Dynamics NAV Learning Lab",
+  category: "ERP Development · Self-Directed",
   description:
-    "Fully customizable e-commerce platform built with a friend — admins can configure layouts, categories, and branding to fit any shop, with order tracking, wishlists, and integrated M-Pesa, Airtel Money, and card checkout via Pesapal. Live and actively serving customers.",
-  tags: ["E-Commerce", "Payments Integration", "Admin Dashboard", "M-Pesa/Pesapal"],
-  image: mktPlace, // add a homepage screenshot when you have one
+    "Ongoing hands-on development in Microsoft Dynamics NAV 2016 using the C/SIDE development environment and C/AL. Building and extending tables, pages, codeunits, reports, and posting routines while studying real ERP workflows and applying concepts from Microsoft Dynamics NAV development to the enterprise systems I work with.",
+  tags: [
+    "Microsoft Dynamics NAV",
+    "C/AL",
+    "C/SIDE",
+    "ERP Development",
+    "SQL Server"
+  ],
+  image: dynamicsNav, // add a clean NAV/C-SIDE screenshot
   links: {
-    live: "https://chapahustle.co.ke/",
+    live: null,
     apk: null,
     video: null,
-    github: null, // add if the repo is public, or leave null if it's closed-source
+    github: null
   },
 },
   {
-    id: 2,
-    title: "Service Marketplace Platform(SIGZ)",
-    category: "Web platform · Founder Project",
-    description:
-      "Platform connecting plumbers and skilled workers directly with clients who need their services. Built end-to-end, currently testing with real users.",
-    tags: ["React JS", "Email Js", "Tailwind css"], // swap for actual stack
-    image: sigz,
-    links: { video: null, apk: null, github: null, live: "https://sigz.vercel.app/" }, // fill in what's real
+  id: 2, // adjust to the next available id in your array
+  title: "UfundiHome — Fundi Marketplace",
+  category: "Full-Stack Marketplace · Co-Founded",
+  description:
+    "A location-based marketplace connecting customers with plumbers, electricians, painters, fitters, welders, carpenters, masons, and other skilled fundis across Kenya. Customers can discover nearby fundis, view ratings and contact details, then call or WhatsApp them directly without a middleman.",
+  tags: [
+    "Marketplace",
+    "Location-Based Services",
+    "React",
+    "Worker Dashboard",
+    "Call & WhatsApp"
+  ],
+  image: ufundiHome, // add your UfundiHome homepage screenshot
+  links: {
+    live: "https://ufundi-c-lient.vercel.app/",
+    apk: null,
+    video: null,
+    github: null, // add if the repo is public
   },
+},
+  {
+  id: 3, // adjust to the next available id in your array
+  title: "Mr & Miss Red Cross — Nakuru 2026",
+  category: "Event Ticketing Platform · Full-Stack",
+  description:
+    "Full-stack event ticketing platform built for the Mr & Miss Red Cross Nakuru 2026 event. Customers can browse ticket packages, purchase tickets through M-Pesa Paybill, receive payment confirmation, and access event information. Includes an affiliate system that allows promoters to generate referral links and earn commissions from verified ticket sales.",
+  tags: [
+    "Event Platform",
+    "Ticketing System",
+    "M-Pesa Integration",
+    "Affiliate System",
+    "Admin Dashboard"
+  ],
+  image: redCross, // add your homepage/event screenshot
+  links: {
+    live: "https://redcross-vert.vercel.app/",
+    apk: null,
+    video: null,
+    github: null, // add if the repository is public
+  },
+},
    {
-  id: 3,
+  id: 4,
   title: "Li-Max-WiFi",
   category: "Business Website · SaaS Landing Page",
   description:
@@ -65,7 +98,7 @@ const myWorkData = [
 },
 
   {
-    id: 4,
+    id: 5,
     title: "Mobile Risk Analysis System",
     category: "Android · Security",
     description:
@@ -76,7 +109,7 @@ const myWorkData = [
        live: "https://github.com/Kipkoech78/MobileRiskAnalysis-App/releases/download/v1/mobileRiskAnalysis.apk" },
   },
   {
-    id: 5,
+    id: 6,
     title: "Exhibition Registration & Validation System",
     category: "Web & Android · QR Technology",
     description:
@@ -86,7 +119,7 @@ const myWorkData = [
     links: { video: null, apk: null, github: null, live: null },
   },
     {
-    id: 6,
+    id: 7,
     title: "health Sphere",
     category: "Android Application · Team Project",
     description:
@@ -98,7 +131,7 @@ const myWorkData = [
     links: { video: null, apk: null, github: "https://github.com/Kipkoech78/Health-Sphere", live: "https://sigz.vercel.app/" }, // fill in what's real
   },
     {
-  id: 7,
+  id: 8,
   title: "News App",
   category: "Android · Self-Directed",
   description:

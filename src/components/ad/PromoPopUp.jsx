@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import "./PromoPopup.css";
 
+const DEMO_URL = "https://sigzgeneralcontractors-seven.vercel.app/";
+
 function PromoPopup() {
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
-    const alreadyShown = sessionStorage.getItem("chapahustle-promo-shown");
+    const alreadyShown = sessionStorage.getItem("cms-site-promo-shown");
     if (alreadyShown) return;
 
     const onScroll = () => {
@@ -17,7 +19,7 @@ function PromoPopup() {
 
       if (scrollPercent > 35) {
         setVisible(true);
-        sessionStorage.setItem("chapahustle-promo-shown", "true");
+        sessionStorage.setItem("cms-site-promo-shown", "true");
         window.removeEventListener("scroll", onScroll);
       }
     };
@@ -35,14 +37,14 @@ function PromoPopup() {
   const requestDemoWhatsapp = () => {
     const phone = "254719200522"; // international format, no + or leading 0
     const message = encodeURIComponent(
-      "Hi Linus, I'd like to see a demo of your Chapahustle e-commerce platform for my shop."
+      "Hi Linus, I'd like a business website for my company that I can edit myself without coding."
     );
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
   };
 
   const requestDemoEmail = () => {
     window.location.href =
-      "mailto:linusngetich78@gmail.com?subject=Demo request - Chapahustle platform&body=Hi Linus, I'd like to see a demo of your e-commerce platform for my shop.";
+      "mailto:linusngetich78@gmail.com?subject=Business website with CMS - enquiry&body=Hi Linus, I'd like a business website for my company that I can edit myself without coding.";
   };
 
   if (!visible || dismissed) return null;
@@ -50,26 +52,27 @@ function PromoPopup() {
   return (
     <div className="promo-popup">
       <button className="promo-close" onClick={close} aria-label="Close">×</button>
-      <span className="promo-tag">Live product</span>
-      <h4>Need an online store like this?</h4>
+      <span className="promo-tag">Live demo</span>
+      <h4>A website you can edit yourself</h4>
       <p>
-        I co-built Chapahustle — a fully customizable e-commerce platform with
-        order tracking and M-Pesa/card checkout. I build these for shops too.
+        I built a business website for a Sigz Contractors co-founder that the
+        owner manages alone: edit, update or delete content and adjust the
+        styling, with no code needed. I can build one for your business too.
       </p>
       <div className="promo-actions">
         <button className="promo-btn-primary" onClick={requestDemoWhatsapp}>
-          Request demo on WhatsApp
+          Get yours on WhatsApp
         </button>
         <button className="promo-btn-secondary" onClick={requestDemoEmail}>
           Request via email instead
         </button>
         <a
-          href="https://chapahustle.co.ke/"
+          href={DEMO_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="promo-link-live"
         >
-          Or see it live →
+          Or see the sample site →
         </a>
       </div>
     </div>
